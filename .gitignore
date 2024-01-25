@@ -10,6 +10,6 @@ __pycache__
 !.flake8
 !.gitignore
 !.gitkeep
-
+venv
 *.rom
 /roms/*
