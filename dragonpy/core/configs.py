@@ -78,8 +78,10 @@ class BaseConfig:
 #         else:
 #             self.bus = None # Will be set in cpu6809.start_CPU()
 
-        assert not hasattr(
-            cfg_dict, "ram"), f"cfg_dict.ram is deprecated! Remove it from: {self.cfg_dict.__class__.__name__}"
+        assert not (
+            hasattr(cfg_dict, "ram"),
+            f"cfg_dict.ram is deprecated! Remove it from: {self.cfg_dict.__class__.__name__}"
+        )
 
 #         if cfg_dict["rom"]:
 #             raw_rom_cfg = cfg_dict["rom"]

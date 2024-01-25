@@ -1,0 +1,6 @@
+[console_scripts]
+darker = darker.__main__:main_with_error_handling
+
+[pygments.lexers]
+lint_description = darker.highlighting.lexers:DescriptionLexer
+lint_location = darker.highlighting.lexers:LocationLexer

@@ -15,7 +15,7 @@ import logging
 import queue
 import sys
 
-from dragonpy.components.periphery import ConsolePeripheryBase
+from dragonpy.components.periphery import ConsolePeripheryMixin
 
 
 log = logging.getLogger(__name__)
@@ -102,7 +102,7 @@ class DummyStdout:
     flush = dummy_func
 
 
-class SBC09PeripheryConsole(SBC09Periphery, ConsolePeripheryBase):
+class SBC09PeripheryConsole(SBC09Periphery, ConsolePeripheryMixin):
     """
     A simple console to interact with the 6809 simulation.
     """

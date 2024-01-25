@@ -1,0 +1,3 @@
+[console_scripts]
+dragonpy_app = dragonpy.__main__:main
+dragonpy_dev = dragonpy.cli.dev:main

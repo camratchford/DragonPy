@@ -248,7 +248,7 @@ class InputPollThread(threading.Thread):
         log.critical("InputPollThread.run() ends, because CPU not alive anymore.")
 
 
-class ConsolePeripheryBase(PeripheryBase):
+class ConsolePeripheryMixin(PeripheryBase):
     def new_output_char(self, char):
         sys.stdout.write(char)
         sys.stdout.flush()

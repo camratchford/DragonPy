@@ -151,7 +151,7 @@ class Test6809_BASIC_simple6809_Base(BaseCPUTestCase):
         )
         cls.cpu = cls.machine.cpu
         cls.periphery = cls.machine.periphery
-        cls.periphery.setUp()
+        cls.periphery.setup()
 
         if os.path.isfile(cls.TEMP_FILE):
             log.info(f"Load CPU init state from: {cls.TEMP_FILE!r}")
@@ -188,7 +188,7 @@ class Test6809_BASIC_simple6809_Base(BaseCPUTestCase):
 
     def setUp(self):
         """ restore CPU/Periphery state to a fresh startup. """
-        self.periphery.setUp()
+        self.periphery.setup()
         self.cpu.set_state(self.__init_state)
 #         print_cpu_state_data(self.cpu.get_state())
 
@@ -255,7 +255,7 @@ class Test6809_sbc09_Base(BaseCPUTestCase):
         )
         cls.cpu = cls.machine.cpu
         cls.periphery = cls.machine.periphery
-        cls.periphery.setUp()
+        cls.periphery.setup()
 
         try:
             temp_file = open(cls.TEMP_FILE, "rb")
@@ -290,7 +290,7 @@ class Test6809_sbc09_Base(BaseCPUTestCase):
 
     def setUp(self):
         """ restore CPU/Periphery state to a fresh startup. """
-        self.periphery.setUp()
+        self.periphery.setup()
         self.cpu.set_state(self.__init_state)
 #         print_cpu_state_data(self.cpu.get_state())
 
@@ -362,7 +362,7 @@ class Test6809_Dragon32_Base(BaseCPUTestCase):
         )
         cls.cpu = cls.machine.cpu
         cls.periphery = cls.machine.periphery
-        cls.periphery.setUp()
+        cls.periphery.setup()
 
 #        os.remove(cls.TEMP_FILE)
         try:
@@ -402,7 +402,7 @@ class Test6809_Dragon32_Base(BaseCPUTestCase):
 
     def setUp(self):
         """ restore CPU/Periphery state to a fresh startup. """
-        self.periphery.setUp()
+        self.periphery.setup()
 #        print "self.__init_state:", ;print_cpu_state_data(self.__init_state)
         self.cpu.set_state(self.__init_state)
 #        print "self.cpu.get_state():", ;print_cpu_state_data(self.cpu.get_state())

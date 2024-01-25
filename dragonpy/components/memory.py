@@ -22,12 +22,13 @@
 
 import array
 import logging
-
+from typing import Any
 
 log = logging.getLogger(__name__)
 
 
 class Memory:
+    cpu: Any
     def __init__(self, cfg, read_bus_request_queue=None, read_bus_response_queue=None, write_bus_queue=None):
         self.cfg = cfg
         self.read_bus_request_queue = read_bus_request_queue
